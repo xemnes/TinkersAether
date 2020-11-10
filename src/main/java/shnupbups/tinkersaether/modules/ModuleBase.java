@@ -117,6 +117,7 @@ public class ModuleBase {
             zanite.setCraftable(true).setCastable(false);
             zanite.addItem("gemZanite", 1, Material.VALUE_Ingot);
             zanite.addItem("blockZanite", 1, Material.VALUE_Block);
+            zanite.addTrait(Gilded.gilded, MaterialTypes.HEAD);
             zanite.addTrait(Zany.zany, MaterialTypes.HEAD);
             zanite.addTrait(jagged, MaterialTypes.HEAD);
             zanite.addTrait(jagged);
