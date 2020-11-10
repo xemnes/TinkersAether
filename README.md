@@ -1,4 +1,6 @@
-# Tinkers' Aether
+This is an updated fork of Shnupbups's TinkersAether.
+
+# Tinkers' Aether: DMAN Edition
 
 Tinkers' Aether is an addon for Tinkers' Construct which adds support for materials from The Aether (formerly Aether Legacy).
 
