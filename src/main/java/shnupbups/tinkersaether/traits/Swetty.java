@@ -11,7 +11,7 @@ public class Swetty extends TATrait {
 
     public static final Swetty swetty = new Swetty();
 
-    private static float chance = 0.0033f;
+    private static final float chance = 0.0033f;
 
     public Swetty() {
         super("swetty", 0x7777FF);

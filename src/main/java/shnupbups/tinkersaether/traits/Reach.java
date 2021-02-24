@@ -44,10 +44,10 @@ public class Reach extends TATrait {
         if ((event.getEntityLiving() instanceof EntityPlayer)) {
             EntityPlayer player = (EntityPlayer) event.getEntityLiving();
             ItemStack stack = player.getHeldItemMainhand();
-            if (!player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(this.reachModifier) && isToolWithTrait(stack)) {
-                player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).applyModifier(this.reachModifier);
-            } else if (player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(this.reachModifier) && !isToolWithTrait(stack)) {
-                player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).removeModifier(this.reachModifier);
+            if (!player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(reachModifier) && isToolWithTrait(stack)) {
+                player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).applyModifier(reachModifier);
+            } else if (player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(reachModifier) && !isToolWithTrait(stack)) {
+                player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).removeModifier(reachModifier);
             }
         }
     }
@@ -71,7 +71,7 @@ public class Reach extends TATrait {
                     continue;
                 }
                 Vec3d vec = new Vec3d(ent.posX - player.posX, ent.getEntityBoundingBox().minY + ent.height / 2f - player.posY - player.getEyeHeight(), ent.posZ - player.posZ);
-                double len = vec.lengthVector();
+                double len = vec.length();
                 if (len > 10.0F) {
                     continue;
                 }

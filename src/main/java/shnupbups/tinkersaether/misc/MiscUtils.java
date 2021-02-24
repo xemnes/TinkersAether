@@ -39,7 +39,7 @@ public class MiscUtils {
     }
 
     public static boolean between(float num, float min, float max) {
-        return num <= max && num >= min ? true : false;
+        return num <= max && num >= min;
     }
 
     public static float percent(float num, float pc) {

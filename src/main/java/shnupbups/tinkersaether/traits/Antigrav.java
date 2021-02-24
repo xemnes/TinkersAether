@@ -26,7 +26,7 @@ public class Antigrav extends TATrait{
         ItemStack heldItem = event.getItemStack();
         if (event.getWorld().isRemote
                 || !event.getEntityPlayer().isSneaking()
-                || heldItem == null
+                || heldItem == ItemStack.EMPTY
                 || !isToolWithTrait(heldItem)
                 || ToolHelper.getCurrentDurability(event.getItemStack()) < 4)
             return;
@@ -38,10 +38,11 @@ public class Antigrav extends TATrait{
             if (!world.isRemote) {
                 EntityFloatingBlock ent = new EntityFloatingBlock(world, pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, world.getBlockState(pos));
                 world.spawnEntity(ent);
-                world.setBlockToAir(pos);
             }
 
-            ToolHelper.damageTool(event.getItemStack(), 4, event.getEntityLiving());
+            if (!event.getEntityPlayer().isCreative()) {
+                ToolHelper.damageTool(event.getItemStack(), 4, event.getEntityLiving());
+            }
         }
     }
 }

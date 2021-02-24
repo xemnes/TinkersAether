@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -52,7 +53,7 @@ public class ClientProxy extends CommonProxy {
         if (block != null) {
             Item item = Item.getItemFromBlock(block);
             FluidStateMapper mapper = new FluidStateMapper(fluid);
-            if (item != null) {
+            if (item != Items.AIR) {
                 ModelBakery.registerItemVariants(item);
                 ModelLoader.setCustomMeshDefinition(item, mapper);
             }
