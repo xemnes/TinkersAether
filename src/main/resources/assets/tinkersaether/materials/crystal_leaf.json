@@ -1,7 +1,6 @@
 {
-  "type": "colored",
-  "suffix": "feather",
+  "type": "block",
   "parameters": {
-    "color": "29AAD9"
+    "texture": "tinkersaether:materials/crystal_leaves"
   }
 }

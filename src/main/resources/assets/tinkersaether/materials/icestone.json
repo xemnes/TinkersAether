@@ -2,6 +2,6 @@
   "type": "block",
   "suffix": "aether",
   "parameters": {
-    "texture": "tinkersaether:materials/valkyrie"
+    "texture": "aether_legacy:blocks/icestone"
   }
 }

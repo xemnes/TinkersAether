@@ -34,7 +34,7 @@ public class ToolDart extends ProjectileCore {
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if(this.isInCreativeTab(tab)) {
-            addDefaultSubItems(subItems, ModuleBase.skyroot, null, TinkerMaterials.feather);
+            addDefaultSubItems(subItems, ModuleBase.skyroot, TinkerMaterials.iron, TinkerMaterials.feather);
         }
     }
 

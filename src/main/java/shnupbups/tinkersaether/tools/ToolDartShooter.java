@@ -21,6 +21,7 @@ import slimeknights.tconstruct.library.tinkering.PartMaterialType;
 import slimeknights.tconstruct.library.tools.ProjectileLauncherNBT;
 import slimeknights.tconstruct.library.tools.ranged.BowCore;
 import slimeknights.tconstruct.library.utils.ToolHelper;
+import slimeknights.tconstruct.tools.TinkerMaterials;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -37,7 +38,7 @@ public class ToolDartShooter extends BowCore {
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if(this.isInCreativeTab(tab)) {
-            addDefaultSubItems(subItems, null, null);
+            addDefaultSubItems(subItems, TinkerMaterials.wood, TinkerMaterials.iron);
         }
     }
 

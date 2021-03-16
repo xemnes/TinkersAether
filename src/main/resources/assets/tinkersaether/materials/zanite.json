@@ -1,0 +1,11 @@
+{
+    "type": "metal_textured",
+	"suffix": "aether",
+    "parameters": {
+        "texture": "tconstruct:materials/shiny",
+        "color": "6611DD",
+        "shinyness": 0.6,
+        "brightness": 0.1,
+        "hueshift": 0.0
+    }
+}
